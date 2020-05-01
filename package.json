@@ -34,7 +34,9 @@
   "scripts": {
     "benchmark": "node ./packages/tests/",
     "format": "find . -name '*.js' | grep -v node_modules | xargs prettier --trailing-comma es5 --single-quote --write",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "lint-staged": {
     "*.js": [
@@ -43,6 +45,8 @@
     ]
   },
   "dependencies": {
-    "babel-plugin-emotion": "^8.0.12"
-  }
+    "babel-plugin-emotion": "^8.0.12",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
