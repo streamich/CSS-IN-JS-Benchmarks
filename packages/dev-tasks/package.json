@@ -14,6 +14,12 @@
     "extract-text-webpack-plugin": "^2",
     "webpack": "2.4.1",
     "webpack-dev-server": "2.4.5",
-    "yargs": "7.1.0"
-  }
+    "yargs": "7.1.0",
+    "snyk": "^1.316.1"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
+  },
+  "snyk": true
 }
